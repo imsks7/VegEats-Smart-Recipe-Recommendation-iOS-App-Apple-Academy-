@@ -1,79 +1,64 @@
 # VegEats – Smart Recipe Recommendation iOS App
 
 ## Overview
-VegEats is an iOS application designed to help users discover healthy recipes based on ingredients available in their kitchen. The app promotes sustainable food consumption by reducing waste and encouraging balanced eating habits.
+VegEats is an iOS application designed to help users cook healthy vegetarian meals using ingredients already available in their kitchen. The app focuses on reducing food waste and supporting sustainable eating habits.
 
-## Objective
-- Suggest recipes based on user-selected ingredients  
-- Reduce food waste by utilizing available resources  
-- Provide a simple and intuitive cooking experience  
+## Problem
+Many people, especially students living alone, struggle to decide what to cook after a long day.  
+This often leads to:
+- Food waste  
+- Unhealthy eating habits  
+- Limited meal variety  
+
+As illustrated in the project scenario, users may only have a few ingredients and lack ideas for recipes :contentReference[oaicite:1]{index=1}  
+
+## Solution
+VegEats provides recipe suggestions based on the ingredients users already have, helping them cook quickly and sustainably.
 
 ## Key Features
 
-### 🍽 Recipe Discovery
-- Browse recipes with images and key details  
-- Search functionality to filter recipes dynamically  
-- Ingredient-based recipe selection  
+### 🍽 Ingredient-Based Recipes
+- Users input available ingredients  
+- App suggests relevant vegetarian recipes  
+
+### 👥 Meal Customization
+- Select number of people  
+- Adjust recipes accordingly  
 
 ### ❤️ Favorites System
-- Save recipes using a like (heart) feature  
-- Access saved recipes in a dedicated profile section  
+- Save recipes for quick access  
+- Personalized recipe collection  
 
-### 👥 User Interaction
-- Input ingredients manually  
-- Select number of people for meal preparation  
-- Navigate through a guided cooking flow  
+### 📊 Recipe Information
+- Nutritional values  
+- Type of dish  
+- Storage information :contentReference[oaicite:2]{index=2}  
 
-### 📱 UI/UX Design
-- Tab-based navigation (Recipes & Profile) :contentReference[oaicite:0]{index=0}  
-- Clean card-based layout for recipes  
-- Smooth navigation using SwiftUI NavigationStack  
-
-## Architecture
-
-### Data Management
-- Used **ObservableObject pattern** for state management  
-- Centralized data using shared instances:
-  - `RecipeData` for recipes and favorites :contentReference[oaicite:1]{index=1}  
-  - `SharedData` for user-related data :contentReference[oaicite:2]{index=2}  
-
-### Models
-- `Recipe` model stores:
-  - Ingredients, preparation time, nutritional values :contentReference[oaicite:3]{index=3}  
-- `Learner` and `Team` models for user-related features :contentReference[oaicite:4]{index=4}  
-
-### Views & Components
-- **RecipeCardView** → Displays list of recipes with search functionality :contentReference[oaicite:5]{index=5}  
-- **RecipeDetailView** → Shows detailed recipe information and allows saving :contentReference[oaicite:6]{index=6}  
-- **ProfileView** → Displays saved and suggested recipes :contentReference[oaicite:7]{index=7}  
-- **IngredientView** → Allows users to input ingredients dynamically :contentReference[oaicite:8]{index=8}  
-
-### Navigation Flow
-- Tab-based navigation using `TabView`  
-- NavigationStack used for hierarchical navigation  
-- Modal sheets used for additional views (e.g., recipe details)
+## Design Approach
+- User-centered design based on real persona (e.g., student living alone) :contentReference[oaicite:3]{index=3}  
+- Focus on simplicity and ease of use  
+- Clean and intuitive UI using SwiftUI  
 
 ## Technologies Used
 - Swift  
 - SwiftUI  
 - Xcode  
-- MVVM-like architecture  
+- ObservableObject for state management  
 
 ## Implementation Highlights
-- Dynamic filtering of recipes using search bar  
-- Real-time UI updates using `@Published` and `@State`  
-- Modular view structure for scalability  
-- Reusable components for UI consistency  
+- Dynamic recipe filtering based on user input  
+- Real-time UI updates using SwiftUI state management  
+- Modular architecture with reusable views  
 
 ## Impact
-- Encourages sustainable food usage  
+- Encourages sustainable food consumption  
+- Reduces food waste  
 - Helps users make quick and healthy meal decisions  
-- Improves user experience with intuitive design  
 
 ## Future Improvements
-- AI-based recipe recommendation system  
-- Integration with grocery delivery services  
-- Nutritional tracking and personalization  
+- AI-based recipe recommendations  
+- Ingredient recognition using camera  
+- Integration with food delivery services :contentReference[oaicite:4]{index=4}  
 
 ## Author
 Sudip Kishan Sarker  
